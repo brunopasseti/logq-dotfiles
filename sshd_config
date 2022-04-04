@@ -1,0 +1,23 @@
+Include /etc/ssh/sshd_config.d/*.conf
+
+Port 8022
+
+# Authentication:
+
+LoginGraceTime 2m
+PermitRootLogin yes
+MaxAuthTries 6
+# MaxSessions 10
+PubkeyAuthentication yes
+PasswordAuthentication no
+AuthenticationMethods publickey
+
+# Disable print motd
+PrintMotd no
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem	sftp	/usr/lib/openssh/sftp-server
+
