@@ -10,7 +10,7 @@ MaxAuthTries 6
 # MaxSessions 10
 PubkeyAuthentication yes
 PasswordAuthentication yes
-AuthenticationMethods password,publickey
+AuthenticationMethods password publickey
 
 # Disable print motd
 PrintMotd no
